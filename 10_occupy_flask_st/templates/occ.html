@@ -1,29 +1,32 @@
+
 <!DOCTYPE html> 
 <html> 
-  <head> 
-    <title>
-      {% if title %}
-      {{title}}
-      {% endif %}
-    </title>
-    {% if head %}
-    {{head}}
-    {% endif %}
-  </head>
-  
-  <body>
-    <table>
-      {% for varx in var1 %}
-      <tr>
-	<th>
-	  {{ varx[0]}}
-	</th>
-	<th>
-	  {{ varx[2]}}
-	</th>
-      </tr>
-      {% endfor %}
-    </table>
-  </body>
+	<head> 
+	  <title> {{Title}} </title>
+	</head>
+	
+	<body>
+	  <p> <b> Job: </b> {{random}} </p>
+	  <table>
+	  <tr>
+	    <th>
+	      {{ title }}
+	    </th>
+	    <th>
+	      {{ title2 }}
+	    </th>
+	  </tr>
+	  {% for j,p in dictjobs.items() %}
+	  <tr>
+	    <td>
+	      {{ j }}
+	    </td>
+	    <td>
+	      {{ p }}
+	    </td>
+	  </tr>
+	  {% endfor %}
+	  </table>
+	</body>
 
 </html>
