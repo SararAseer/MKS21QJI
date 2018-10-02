@@ -1,0 +1,14 @@
+<html>
+<body>
+    <form action="/auth" method="post"><!--tells which py program to use-->
+        <p>You are not logged in. </p>
+
+        Username: <input type="text" name="username">   <font color="red"> {{incUser}} </font><!--sets up text box for username and initializes jinja varible-->
+        <br>
+        Password: <input type="password" name="password">   <font color="red"> {{incPass}} </font><!--sets up text box for password  and initializes jinja varible-->
+        <br>
+        <input type="submit" name="Subl"><!--creates a submit button-->
+    </form>
+</body>
+
+</html>
