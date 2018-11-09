@@ -1,3 +1,9 @@
+<!-- Zapdos: Thomas Zhao and Sarar Aseer
+     SoftDev pd8
+     K21 -- Who Does Frame Work For?
+     2018-11-07
+  -->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,25 +12,28 @@
 	  href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.5.0/css/foundation.css">
 
     <style>
-     
-
       h1, h4 {
       text-align:center;
       }
+
       h5 {
       text-align:center;
       text-decoration:underline;
       }
+
       hr {
-      border-color:white;
+      border-color:black;
       }
-      <code>.expanded</code>
-      <code>hollow</code>
-      <code>.dropdown</code>
+
+      p {
+      text-align:center;
+      margin:10px;
+      padding:10px;
+      }
     </style>
     
-    
   </head>
+
   <div class="top-bar">
     <div class="top-bar-left">
       <a class="clear button" href="#">Uno</a>
@@ -35,48 +44,130 @@
       <a class="clear button disabled" href="#"> Discapacitado</a>
     </div>
     <div class="top-bar-right">
-    <ul class="menu">
-      <li><input type="search" placeholder="Search"></li>
-      <li><button type ="button" class="hollow button">Search</button></li>
-    </ul>
+      <ul class="menu">
+	<li><input type="search" placeholder="Search"></li>
+	<li><button type ="button" class="hollow button">Search</button></li>
+      </ul>
+    </div>
   </div>
-  </div>
+  
+  <body style="background-color:lightblue">
 
+    
+    
+    <h1>Welcome to this website.<h1>
+	<h4>Time to learn some Foundation.</h4>
 
-  <body style="background-color:black" >
-    <font color="white">
-      <h1>Welcome to this website.<h1>
-	  <h4>Time to school y'all on Foundation.</h4>
+	<hr>
 
-	  <hr>
+	<h5> The Grid </h5>
+	<p> Foundation possesses a <b>gridding system</b>, accessible through the "grid-x" class. You can add as many cells to the grid as you'd like. A grid's length is 12 and each cell's length by default is set to 12. You can alter a cell's length at different browser sizes by using the following class format: <i>size-number</i> where size is small, medium, large and number is positive and is 12 or less.</p>
 
-	  <h5> Foundation </h5>
+	<p>Try resizing the window to see the cells move in response to the change.</p>
+	
+	<div class="grid-x" style="border:2px solid; margin:10px; padding:10px">
+	  <div class="cell"> This is a 12 cell within the grid</div>
+	  <div class="cell"> This is a 12 cell within the grid</a></div>
+	</div>
+	
+	<div class="grid-x" style="border:2px solid; margin:10px; padding:10px">
+	  <div class="cell large-6 medium-4 small-12"> This is a small-6 cell in a grid </div>
+	  <div class="cell small-6"> This is a small-6 cell in a grid </div>
+	</div>
+	
+	<div class="grid-x" style="border:2px solid; margin:10px; padding:10px">
+	  <div class="cell medium-6 large-4">This is a medium-6 large-4 cell in a grid </div>
+	  <div class="cell medium-6 large-8">This is a medium-6 large-8 cell in a grid</div>
+	</div>
+
+	<hr>
+
+	<h5>The Buttons</h5>
+	<p> Foundation is equipped with <b>easy button</b> making! You can use the tag <i>button type="button"</i> or the tag <i>a class="button".</i> The former will allows you to specify classes of buttons, while the latter is a more general button. As you can see below, the type buttons look different from the class buttons.</p>
+
+	<p>
+	  <button type="button" class="success button">Save</button>
+	  <button type="button" class="alert button">Delete</button>
+
+	  <br>
 	  
-	  <form>
-	    <div class="grid-container">
-	      <div class="grid-x grid-padding-x">
-		<div class="medium-6 cell">
-		  <input type="text" placeholder="Name">
-		</div>
-		<div class="medium-6 cell">
-		  <input type="text" placeholder="Email">
-		</div>
-		<div class="medium-6 cell">
-		    <input type="number" placeholder="Age">
-		</div>
-		<div class="medium-6 cell">
-		  <select>
-		    <option value="Login">Login</option>
-		    <option value="Register">Register</option>
-		    <option value="CY@">CY@</option>
-		  </select>
-		</div>
-		<div class="medium-6 cell">
-		  <button type ="button" class="hollow button">Enter</button>
-		</div>
+	  <a class="button tiny" href="#">Tiny</a>
+	  <a class="button small" href="#">Small</a>
+	  <a class="button" href="#">Regular</a>
+	  <a class="button large" href="#">Large</a>
+	  <a class="button expanded" href="#">Long</a>
+	  <a class="button small expanded" href="#">Thin Long</a>
+	</p>
+
+	<hr>
+
+	<h5> The Menus </h5>
+
+	<p> Menus are a great way to navigate around a website and Foundation allows for the simple creation of menus. Foundation will provide the basic structure that a menu fulfills, such as linkages to different parts of the website. In addition, there are many stylistic choices that can be made, such as a horizontal vs. a vertical menu. Making a menu is analogous to making an unordered list.</p>
+
+	<p> Horizontal Menu: </p>
+	<ul class="menu align-center">
+	  <li><a href="#">Home</a></li>
+	  <li><a href="#">Prices</a></li>
+	  <li><a href="#">Purchase</a></li>
+	  <li><a href="#">Customer Support</a></li>
+	</ul>
+
+	<p> Vertical Menu: </p>
+	<ul class="menu vertical align-center">
+	  <li><a href="#">Home</a></li>
+	  <li><a href="#">Prices</a></li>
+	  <li><a href="#">Purchases</a></li>
+	  <li><a href="#">Customer Support</a></li>
+	</ul>
+	
+	<hr>
+	
+	<h5> The Forms </h5>
+
+	<p> Foundation provides support for the creation of forms. Common input methods are of course the text box but others include the dropdown selection box. You are allowed to have placeholders in these text fields by default so then the user knows what to type in. A form is defined with the form tag; the inputs with input tags. In this particular example, the form elements are displayed within a grid.</p>
+
+	<form>
+	  <div class="grid-container">
+	    <div class="grid-x grid-padding-x">
+	      <div class="medium-6 cell">
+		<input type="text" placeholder="Name">
+	      </div>
+	      <div class="medium-6 cell">
+		<input type="text" placeholder="Email">
+	      </div>
+	      <div class="medium-6 cell">
+		<input type="number" placeholder="Age">
+	      </div>
+	      <div class="medium-6 cell">
+		<select>
+		  <option value="Login">Login</option>
+		  <option value="Register">Register</option>
+		  <option value="CY@">CY@</option>
+		</select>
+	      </div>
+	      <div class="medium-6 cell">
+		<button type ="button" class="hollow button">Enter</button>
 	      </div>
 	    </div>
-	  </form>
-    </font>
+	  </div>
+	</form>
+	
+	<hr>
+
+	<h5> The Top-Bar </h5>
+	<p> The top-bar exists at the very top of the page (you have to scroll back up)! It is easily supported by Foundation and is a pretty versatile feature. From the example provided on this website, you can see it's able to house not only buttons in a menu-like fashion, but also a search bar. </p>
+	
+	<hr>
+	
+	<h4> Hope something was learned! </h4>
+
+	<div class="footer" style="text-align:center">
+	  Copyright &copy; Zapdos: Thomas Zhao and Sarar Aseer <br>
+	  SoftDev pd8 <br>
+	  K21 -- Who Does Frame Work For? <br>
+	  2018-11-07
+	</div>
+	
   </body>
 </html>
