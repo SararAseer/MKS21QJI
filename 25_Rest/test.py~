@@ -1,0 +1,29 @@
+#Sarar Aseer
+#SoftDev1 pd8
+#24 REST
+#2018-11-14
+
+from flask import Flask, render_template, request
+from flask import session, redirect, url_for
+import os, urllib, json
+
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+                     url="https://api.nasa.gov/planetary/apod?api_key=KmUfLJ7wnHIVR9PMe2ha8SlYyWmnKMqYldGqziOp&date=2018-11-12&hd=True"       
+                    httpresponse = urllib.request.urlopen(url) #this is initial httpresponse
+                    readresponse = httpresponse.read() #we are reading response
+                    decodedresponse = readresponse.decode() #we decode it for the json to load later
+                    print(readresponse)
+
+                    data = json.loads(decodedresponse) #json loads this into usable dictionary
+                    
+                    
+                    return render_template("template.html", data=data)
+
+if __name__ == '__main__':
+    app.debug = True
+    app.run()
+
